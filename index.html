@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>Hexo</title> 
+  <link rel="icon" href="/images/fav.png" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" /> 
+  <link rel="canonical" href="http://example.com" /> 
+  <link rel="stylesheet" href="/css/style.css" /> 
+  <link rel="stylesheet" href="/css/mdui.css" importance="high"/> 
+  
+  <link rel="stylesheet" href="//blog.kuri.ink/lib/aplayer@1.10.0/aplayer.min.css" /> 
+  
+  <script src="//cdn.kuri.ink/js/mdui/mdui.min.js" async></script>
+  <style>
+   @import url("/css/iconfont.css");
+  </style>
+ <meta name="generator" content="Hexo 7.3.0"></head> 
+ <body> 
+   <script>
+    let images = "/images/NAGI.jpg"
+    images = images.split(',')
+    let currentIndex = 0;
+
+    function changeBackground() {
+        //document.getElementById("bg").style.opacity = 1; // 渐隐
+        setTimeout(() => {
+            document.getElementById("bg").style.backgroundImage = `url(${images[currentIndex]})`;
+            document.getElementById("bg").style.opacity = 1; // 渐显
+            currentIndex = (currentIndex + 1) % images.length;
+        }, 1000); // 与transition时间一致
+    }
+
+    changeBackground()
+    setInterval(changeBackground, 15000); // 每15秒切换一次背景
+</script>
+  <div class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-loaded"> 
+   <!-- background --> 
+   <div id="bg" class="index_bg"></div> 
+   <!-- main --> 
+   <div>
+    
+    <header class="appbar mdui-appbar mdui-appbar-fixed" importance="high"> 
+    <div class="mdui-toolbar mdui-color-theme card-content"> 
+     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"> <i class="mdui-icon material-icons" mdui-tooltip="{content: '菜单'}">menu</i> </span> 
+     <div class="mdui-toolbar-spacer">
+      
+     </div> 
+     <a href="" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Github'}"> 
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;"> 
+       <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path> 
+      </svg> </a> 
+    </div> 
+   </header>  
+
+    <div class="mdui-drawer mdui-drawer-close sidebar" id="main-drawer"> 
+     <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 75px;"> 
+       
+      <div class="
+                mdui-collapse-item
+                "> 
+       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple"> 
+        <i class="
+                    mdui-list-item-icon
+                    mdui-icon
+                    material-icons
+                    mdui-text-color-blue">near_me</i>
+        <div class="mdui-list-item-content">
+         RGB灯控教程
+        </div> 
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i> 
+       </div>
+        
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.signalrgb.com/" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">SignalRGB</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.openrgb.org/" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">OpenlRGB</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://wiki.nollie.cn/zh/home" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">NollieRGB</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://yicoobeila.com/" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">YicoSync</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://example.com/" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">DRGBmod</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://github.com/namazso/PawnIO.Setup/releases/latest/download/PawnIO_setup.exe" target="_blank" mdui-tooltip="{content: 'OpenRGB底层访问驱动库'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">PawnIO</a> 
+         </div>
+         
+      </div> 
+       
+      <div class="
+                mdui-collapse-item
+                "> 
+       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple"> 
+        <i class="
+                    mdui-list-item-icon
+                    mdui-icon
+                    material-icons
+                    mdui-text-color-blue">near_me</i>
+        <div class="mdui-list-item-content">
+         STM32分享
+        </div> 
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i> 
+       </div>
+        
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://example.com/" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">FreeRtos</a> 
+         </div>
+         
+      </div> 
+       
+      <div class="
+                mdui-collapse-item
+                "> 
+       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple"> 
+        <i class="
+                    mdui-list-item-icon
+                    mdui-icon
+                    material-icons
+                    mdui-text-color-blue">layers</i>
+        <div class="mdui-list-item-content">
+         工具
+        </div> 
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i> 
+       </div>
+        
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.uwe-sieber.de/files/UsbTreeView_x64.zip" target="_blank" mdui-tooltip="{content: '查看电脑USB树'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">USB树</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.yishimei.cn/network/319.html?=20:52:33" target="_blank" mdui-tooltip="{content: 'Win系统激活工具'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">KMS系统激活工具</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.usbzh.com/download/tool/usb/BusHound_v6.0.1.zip" target="_blank" mdui-tooltip="{content: '可以抓包USB数据'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">BusHound USB抓包工具</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://aka.ms/DotnetRepairTool" target="_blank" mdui-tooltip="{content: '微软.NET修复工具'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">微软.NET修复工具</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://jginyue.com.cn/public/upload/微软VC++运行库合集_2023.04.24.exe" target="_blank" mdui-tooltip="{content: '微软C++运行库'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">C++运行库</a> 
+         </div>
+         
+      </div> 
+       
+      <div class="
+                mdui-collapse-item
+                "> 
+       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple"> 
+        <i class="
+                    mdui-list-item-icon
+                    mdui-icon
+                    material-icons
+                    mdui-text-color-blue">near_me</i>
+        <div class="mdui-list-item-content">
+         链接分享
+        </div> 
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i> 
+       </div>
+        
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.tbtool.cn/download/" target="_blank" mdui-tooltip="{content: '图吧工具箱'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">图吧工具箱</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://store.steampowered.com/" target="_blank" mdui-tooltip="{content: 'steam官网,一般打不开'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">Steam</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://github.com/TranslucentTB/TranslucentTB/releases/tag/2025.1" target="_blank" mdui-tooltip="{content: '可以隐藏Windows任务栏,GitHub下载'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">TranslucentTB</a> 
+         </div>
+          
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://www.steamtools.net/" target="_blank" mdui-tooltip="{content: 'SteamTools游戏入库工具'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">SteamTools入库工具</a> 
+         </div>
+         
+      </div> 
+      
+     </div> 
+    </div> 
+   </div> 
+
+   <div id="container" class="container"> 
+    <div class="card"> 
+     <div id="card-content" class="card-content"> 
+      <center>
+       <div class="logo"></div>
+       <style>
+        .logo {
+	        width: 100px;
+	        height: 100px;
+	        margin-top: -50px;
+	        border:1px soild white;
+	        background: url('/images/nagi_logo.jpg') no-repeat center;
+	        border-radius: 50px;
+	        background-size: 100px;
+        }
+       </style>
+      </center> 
+      <b class="nickname">Sky</b> 
+      <br /> 
+      <b class="motto">无论是过去还是未来,我来守护你</b> 
+     </div> 
+    </div> 
+
+    <div class="card" style="margin-top: 1%;"> 
+     <div id="card-content" class="card-content"> 
+      <div class="social">
+         
+        <a href="https://b23.tv/nudAmDY" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '哔哩哔哩'}"><span class="iconfont iconbili"></span></button></a> 
+        
+        <a href="https://b23.tv/nudAmDY" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '博客'}"><span class="iconfont iconblog"></span></button></a> 
+        
+        <a href="https://m.tb.cn/h.7tI4hYE?tk=AtjlUQioAKZ HU293" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '闲鱼'}"><span class="iconfont iconlink"></span></button></a> 
+        
+        <a href="https://b23.tv/nudAmDY" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '关于我'}"><span class="iconfont iconaboutme"></span></button></a> 
+       
+      </div> 
+     </div> 
+    </div> 
+
+   </div>  
+
+   <!-- footer --> 
+   <div id="footer" class="footer"> 
+    <p class="remark">
+      爱来自<br>
+      
+      <br>Powered By <a href="https://hexo.io/" target="_blank"> Hexo </a> And <a href="https://mdui.org" target="_blank">MDUI</a>.<br /> Theme ❤ <a href="https://kuri.ink/" target="">kuri</a>. 
+
+    </p> 
+   </div>  
+   <script async="" src="//blog.kuri.ink/lib/aplayer@1.10.0/aplayer.min.js" type="text/javascript"></script> 
+   <script async="" src="//blog.kuri.ink/lib/meting/meting.min.js" type="text/javascript"></script>
+
+   
+      <meting-js style="position: absolute; z-index:99999;" type="" server="" id="" fixed="true"></meting-js> 
+   
+
+   
+      <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+      <script>LA.init({id: "",ck: ""})</script>
+   
+
+  </div>
+ </body>
+</html>
